@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Home - Interior Design</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+  --accent-color: #000;
+}
+body.dark {
+  --bg-color: #1c1c1c;
+  --text-color: #f1f1f1;
+  --accent-color: #f1f1f1;
+}
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+header .logo {
+  font-weight: bold;
+}
+header nav a {
+  margin-left: 30px;
+}
+header .signup {
+  padding: 8px 16px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-radius: 4px;
+}
+#theme-toggle {
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--accent-color);
+}
+.hero {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+.hero-text {
+  max-width: 500px;
+}
+.hero-text h1 {
+  font-size: 48px;
+}
+.hero-text p {
+  margin: 20px 0;
+}
+.hero-text .btn {
+  padding: 14px 28px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  display: inline-block;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.hero-text .btn:hover {
+  opacity: 0.8;
+}
+.hero-images {
+  display: flex;
+  gap: 20px;
+}
+.stats {
+  display: flex;
+  gap: 40px;
+  padding: 20px 0;
+}
+.services {
+  padding: 40px 60px;
+}
+.services h2 {
+  font-size: 32px;
+}
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.services-list div {
+  max-width: 300px;
+}
+.dream {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+.dream-text {
+  max-width: 500px;
+}
+.dream-buttons div {
+  padding: 10px 0;
+}
+.dream-text .btn {
+  padding: 10px 20px;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  display: inline-block;
+  border-radius: 4px;
+  transition: opacity 0.3s;
+}
+.dream-text .btn:hover {
+  opacity: 0.8;
+}
+.steps {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+.steps-text {
+  max-width: 500px;
+}
+.testimonials {
+  padding: 40px 60px;
+}
+.testimonial-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.testimonial {
+  max-width: 300px;
+  background-color: rgba(0,0,0,0.03);
+  padding: 20px;
+  border-radius: 4px;
+}
+.subscribe {
+  text-align: center;
+  padding: 40px 60px;
+}
+.subscribe input {
+  padding: 10px;
+  width: 300px;
+}
+.subscribe button {
+  padding: 10px 20px;
+}
+footer {
+  background-color: rgba(0,0,0,0.03);
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer-column {
+  max-width: 200px;
+}
+.footer-column h4 {
+  font-weight: bold;
+}
+.footer-column a {
+  display: block;
+  margin: 5px 0;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  .services-list,
+  .testimonial-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .dream,
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Simple Fade-In Animation */
+img, .hero-text, .dream-text, .steps-text, .testimonial, .services-list div {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">My Home</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Service</a>
+    <a href="#">Support</a>
+    <a href="#">Contact</a>
+    <a href="#" class="signup">Sign up</a>
+    <a id="theme-toggle">🌙</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Interior Design</h1>
+    <p>Step into a world where the art of Interior Design is meticulously crafted to bring together timeless elegance and cutting-edge modernity, shaping spaces that redefine the way we live and experience beauty.</p>
+    <a href="#" class="btn">Start Project</a>
+    <div class="stats">
+      <div><strong>400+</strong><br>Project Complete</div>
+      <div><strong>600+</strong><br>Happy Customers</div>
+      <div><strong>100+</strong><br>Unique Styles</div>
+    </div>
+  </div>
+  <div class="hero-images">
+    <img src="pics/1.jfif" alt="" style="width: 300px; height: 300px;">
+    <img src="pics/2.jfif" alt="" style="width: 300px; height: 300px;">
+  </div>
+</section>
+
+<section class="services">
+  <h2>– Our Services</h2>
+  <div class="services-list">
+    <div>
+      <h3>Lighting Design</h3>
+      <p>Achieve the perfect balance of ambient, task, and accent lighting for every space.</p>
+    </div>
+    <div>
+      <h3>Interior Design</h3>
+      <p>From concept to completion, we oversee every detail to bring your vision to life efficiently</p>
+    </div>
+    <div>
+      <h3>Outdoor Design</h3>
+      <p>Celebrate the beauty of nature with our captivating outdoor design services</p>
+    </div>
+  </div>
+</section>
+
+<section class="dream">
+  <img src="pics/1.jfif" alt="" style="width: 400px; height: 400px;">
+  <div class="dream-text">
+    <h2>Designing Your Dream With Brilliance</h2>
+    <p>Elevate your spaces with bespoke interior design that reflect your unique style and aspirations, crafted with precision and brilliance for an unforgettable living experience</p>
+    <div class="dream-buttons">
+      <div>Living Room Interior Design +</div>
+      <div>Commercial Office Room Interior Design +</div>
+    </div>
+    <a href="#" class="btn">Learn More</a>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="steps-text">
+    <h2>Designing Your Dream in Three Simple Steps</h2>
+    <h3>Start Project</h3>
+    <p>Embark on your design adventure by initiating your project. Share your vision and set the stage for a bespoke design experience</p>
+    <h3>Craft</h3>
+    <p>Collaborate closely to achieve design excellence refining your vision and crafting brilliance into every aspect of your space</p>
+    <h3>Execute</h3>
+    <p>Witness your vision becoming a reality as we execute the design plan with precision. Celebrate the joy of your newly transformed space</p>
+  </div>
+  <img src="pics/2.jfif" alt="" style="width: 400px; height: 400px;">
+</section>
+
+<section class="testimonials">
+  <h2>What Our Costomers Say About Us</h2>
+  <div class="testimonial-list">
+    <div class="testimonial">
+      <p>"Working with your design team was an absolute pleasure. The attention to detail and creativity exceeded my expectations. Thank you for making my home beautiful."</p>
+      <strong>Rashmi Scott</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Exceptional service! From the initial consultation to the final reveal, your team demonstrated professionalism and a keen eye for design. Highly recommended."</p>
+      <strong>John Lee</strong>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe">
+  <h2>Subscribe to Our Newsletter for Design Insights</h2>
+  <p>Be the first to discover trends, inspirations, and special offers as we bring the world of design directly to your inbox</p>
+  <input type="email" placeholder="Enter your email address"><button>Subscribe</button>
+</section>
+
+<footer>
+  <div class="footer-column">
+    <h4>My Home</h4>
+  </div>
+  <div class="footer-column">
+    <h4>Our Service</h4>
+    <a href="#">Reviews</a>
+    <a href="#">Careers</a>
+    <a href="#">Pricing</a>
+  </div>
+  <div class="footer-column">
+    <h4>Company</h4>
+    <a href="#">About Us</a>
+    <a href="#">Blog</a>
+  </div>
+  <div class="footer-column">
+    <h4>Contact Us</h4>
+    <a href="#">info@Myhome.com</a>
+    <a href="#">Iraq, Basra</a>
+  </div>
+</footer>
+
+<script>
+const themeBtn = document.getElementById('theme-toggle');
+themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  themeBtn.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+});
+</script>
+</body>
+</html>
